@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Web site created using create-react-app" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+  <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
       Only files inside the `public` folder can be referenced from the HTML.
@@ -24,12 +25,16 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
+  <title>React App</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+  </style>
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+  <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
 
@@ -39,5 +44,22 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-  </body>
+</body>
+
+<!-- Web Widget -->
+<div id="pb-widget"></div>
+<script>
+  var bot_config = {
+    PB_HOST: "home",
+    PB_BOTKEY: "79JQfn6UD1Qzw3nql0DzSl8IbZqiojhYmiYuMhXflM-wBod6kpyHbMrOkCYsu9RI2E3yiqRMXjo~",
+    title: "Buywithus",
+    subtitle: "Chatbot",
+    colors: { theme: "#fe8369", text: "#FFFFFF" },
+    conversationOpener: "Welcome to Real Estate Chatbot. how can I assist you with.",
+    descriptionTitle: "chatbot",
+    botAvatar: "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAsLCxoaGyUeHiUmJyIqMCkmNScwLS4nLicqMC0uNS0yKicpLygvLSYoJyYmJiYmLSYmJi0tJicnJyYnLScnLSYBCgcIFRUVFhYVFRcaGBoXHR0aGhoWFx0dGxodHx0eHR0fHR0dIR8dHR8fHR8eLR0gIiUoKCgVHS01LSYyISgoJv/AABEIAOEA4QMBEQACEQEDEQH/xAAbAAEAAgMBAQAAAAAAAAAAAAAAAQYCBAUDB//EADcQAAIBAgMECAQGAgMBAAAAAAABAgMRBAUhEjFBUTJSYXGBkbHRFSKh4RMjkqLB8BRCYmNyM//EABsBAQACAwEBAAAAAAAAAAAAAAABBgIDBQQH/8QAOxEAAgEBBAUJBgUFAQEAAAAAAAECAwQFETESIUFRcQYVImGBkaGx0TJCUpLB4RMjYnLwFjNjgqJTFP/aAAwDAQACEQMRAD8A+uAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAXAIuATcAXAIuATcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAXAIuALAGE6sY72l3uxjOolm0uLM6dKUsot8Eak80or/byuzzyt9Ne93Ys9MLsqv3GuOCPB51R7fIwd6U+vuNquar+nvCzql/y8iFelP9XcHc1X9Peesc1ov/AGt3po2RvCm/ew4pmud11V7uPBpm3CvCW5p+JvhVi8mn2nmqUZRzi1xTPWxmayLgEpgEgAAAAAAAAAAAAAAAAAAAAAAAxuAYykkrt2REpJLFvBEwi28EsXuRx8RncI6QW0+e5HPr3rFeytLryR1LNck5a5vRW7N/Y4tbNKs/9rLktPuc+rb6kvewW5ajq0LrpR93F75a/saLdzzYnrSwyJJBIIABAAIJNujmFWG6Ttyevqb6VtnHKT4PWeWvd1OecVjvWryOxh88i9Jq3atV7+p0KF7J6prDrWRzLTcclrg8ep6n35Hap1IyV4tNdh0adRSWKaaOVVpuLwkmn1makZGBmmAAAAAAAAAAAAAAAAAAAQ2AedwDnY3M4UtN8uXLvZ47ZeEYas5bt3E99guydTXlHfv4FWxGLnUd5Pw4LwOJaLTKb6T7NiLFZbHCmsIrt2vtNc1G8lEkGRKIJJIJBAAIBJBABBJiQSetHETpu8Xb+8UbKNeUHjF4Gu0WaM1hJJ/TgWXBZvGfyy+WX0ft3HYsd5Rlqlqfgyv3hdEodKPSj4r1Ovc6BzD0TAJAAAAAAAAAAAAAABDdgDxvcA4OY5ta8Ke/jLl3dvacm8bywxjB69svQ7d1XRjhOplsjv636FbuchnewJAJJIJBBJJBJJBIAJBBAAZJDIJIIBBBJiCTuZfmzjaFTVcHy7+w6V33lo4Rnlse77HHvS6NLGdPU9sd/DrLNfkdtMr7R6xkCDIAAAAAAAAAAABsA13K4BwM1zG35cHrxf8AC/k5N62/DoRev3n9Dt3LduP5k1q91b+tlcOMd8kkEkkEggEkEkgyRMVuMZPBYltwmWwgldJy4t6+R37LYYxWtJva2Vi2XlOb1NqOxLV3mWKy6E1okpcGtPMm02KM1kk9jRjZLxnBrW2tqbxKi1Z2ZwJrBtbi0Qkmk1k1iYmJkQQSQCSCAQQSQGyTt5XmOy9ib+Xg+X2Olddv0ehJ6tj3dXA4983bpJzguks1vW/iWe53CunvF3AJAAAAAAAAAAPCpLgAcrMsb+FDTpPd2dp4rztf4cdXtPLq6zoXRYfxZ6/ZWfX1FQuV3EtaRIACIJJIJJBIIBJBnGdmnyafkZ0Z4ST3NGu0Q0oyW9NF7p1VJKS1T1LRF461kymyi02nmiZzUU29EtQ3gEsdSKJUqbUnLm2/NlZtE8ZSe9suFlpuMIxeaSRgajcQCSCAASQQEQQSQCS05TjdtbEukt3avsd26LZpLQk9ay619it35YNB6cV0ZZ9T9GdqErHSOQbAAAAAAAAAMJysgEakppJt7lqRKSSbeSMoxbaSzbwRSMXiXUm5eXYirWu0Oc3Lu6kXKw2VU4KO3a972ngjSbySQSCASCQQSiUQ2b1PLqst0X46ep6qdgqP3e/UeOredKOpzT4YvyPX4TW5LzRs5rqbl3o1c80d7+Vlgy6hKnTUZb7v1OvYaTjBKWaODeNaM6kpRyeGzqJzCi503GOrdvUm2U3KEks2RYKqjUjKWSZXvhVbkvNHG5sqbl3osHPFH4n8rPGpl9WOri/DX0MKlhqLOL7NZspXlSllNdurzNM8p7EQCSCAkQQyQCSCAZ0qrhJSW9GdGq4tSWaMK9FTi4vJou9GspxUluZaaFVSipLJoplpouEnF5p/xm7SldGw1s9AQAAAAAAataWtgScHOsRswUFvl6L3ZzL8tGEVFZyz4I6/Jyy6U3N5Ry4v0RWDglmZkiTFmQIBIJBB60aTnJRjvZtoUnNqKzZqtNeMIuUnqRbsJgYUlzlz9uSLDZLFGmtWt7yrW68J1Hr1R2RX13m9c9J4xcAXAFwAALgGhjMBCouUufvzPLbLFGa3S3+p7LDeM6bzxjtT+m4qVak4ScZb0V+tScG4vNFps9ZTipRyZ5Gps2gAgEkEAxZBkjv5JiN8H3r+TsXFXzg+K+pwuUll9mouD+hZKcrM7JwDbBAAAAAIbANC92CWU3Mq+3VlyWnl9ys3pW0qkty1Ls+5cLls+hSjvfSfb9jSPIe4kGLMiSCQQSSCy5NQtFze9+n3Z3bls+EdLa/IrXKC06U9BZR82dm50jki4AuALgC4BNwCACQDi5zh7xU+K0fc/ZnNvmhjHS2rPgdbk/acJ6DyllxK0cIshAJIIBAJMSDJHthq2xOMuT+nE22WtoTjLc/DaabbQ06co71q47C8tlsTKQb0HdAhmQAAAB5VpWQJic2pU2YuXJNmFaejFvcmzOhT0pRjvkl3sod76lPbx1l9UcNSMkSQZEkMlAxZNySGb6y6t1X9D1q7qvwPvXqeHnWj8a7n6FowkHGnFPekvMsFmhowityRV7XU0pzlvkz0q1YwV5NJc2bJSS1t4GqEW3glizmPO6XDafao+9vQ8krypL3vBntjdNZrHR72jdw2Np1Oi9eW5+TPRRrxn7LTPNXs04apRaNo2GoAGpiMdTp6SevJavyRqrV4x9ppG6hZpz9mLZqxzqi9+0u1p2/k1QvCm/eXbibp3XWSxcH2YM6cZpq6d1zR6kzyNHji4bVOSWraZqtUMYSW9M22Opozg90kVX/Aq9SXkV3/AOGp8Ei1c5Uv/SPeaj0PO1hqZ6ovFJrJmJBkYkGSIBKMWYslF2wNXapRfZby0LVd9XSpwfVh3ailXrR0Ks1+rFcHr+p1MO9D0nlZsAgAAA1cU9ATE4uZztRl4LzZ472nhSn16u9nuuOnpV4dWL7kynIq5dDNEoxMiSCSSMAyYmEsi+U+iu5FvjkiiSzZnckgpuMxLqzu9y3Lkufe/sVy8bY5yax6KyX1LXdNgVOKbXSaxb3dRrHjOgSm001o1ufIzo1XFpxeDNdehGacZLFMuGCxP4kFLjufev7cs1lracVLf5lPttndObi9mXDYeeYYp04XXSei9/Axt1o/Dg3tyXEzu6y/iTUdmb4FS7eL48ytVKjk228WW6lSUUlFYJAxMzfy7FOnNL/VuzXJvj7nRuq2OMlFvovwZyb7sClFzS6Sz60Ww7xWiUAUSo/mfe/Uqdp9uX7n5l3sf9uH7V5HkajfgQCSGQyTBkGSLVkk70muTZYbinjTa3SfjrKpymhhVT3wXg2jvYd6s6RyXkbgIAAANLF8AStpwM5l+T4o51+v8rjJHV5NR/O4Rf0KqVwtxkgYsyRJBJKIJZlExlky+Q3LuRb45IoUs2Y1k3Fpcn6ETyfBk03rXFFIRUWXpE3AJBBYsmXyPv8A4R37kX5f+zKxyha/F/1WPieedrSHLX+DXf3sx4vyN3JrDSnv0V5nBOIWEi4A37jOl7Sw3owrYaMscsH5F7LaUcAFEqP5n3v1Klafbl+5+ZebH7EP2ryPM1m4xuRiSQ2QSkYkGSLHkMvlmu1eh3eTz6M+K8itcq49Km/0vzLHh+kdc4Ww3wQAAAaOL4AlbSv5z/8ALxRzb+X5X+y+p1uTL/O/0f0KqmVwt2BkCGSSQ0ZJkmLRLJi9ZjLJ8C+w3LuRcUUGWbMiSCs5hgHFuUVeL17vtyOBelgcW5RXRevg/Qs1zXmpRUJPCS1LHavU5VzmnXNjD4eVR2j58Eb7LZpVHhFcXsR57Za4U1jJ8FtZbqFJQiorcizUKShFRWxFPtNdzk5PNswxWHVSDi/B8mYWyzqpFx7upmdhtTpzUl2reipVqUoO0lZ/3cVqvRlB4SWDLfZ68ZrSi8V/MzxuazcdnLcC21OSsluXN+yOpdNhbanJYJZdb38DiX5eSUXTi8W82ti3cWWI7hXSUAyh1H8z736lRtPty/c/MvVkXQh+1eR5tmrE3GNwZJEXIJMSCSx5D0Z96O7ydWqfFFa5WPpU1+l+aLJh+kdg4Ow6AIAAANHGLQEo4WaRvRl4P6niviONGXVg+5nQuCeFeHXiu9MqBVi7GVyTHAlMEYGRJBJKZjJHbWeyS6C/V9jtq/F8D7yuPk3L413MsFGptRUuaT8zrU5YpPesTh1YaLa3NruPW5kYnhLD03q4x8kaZWWD1uEe5G+NsqJYKcsOLPZJJWWiNsYpaksDTKbettt9bBJAAMZxUlZpNdupjUpqWppPijOnVlF4xbT6ngecMNTWqjFeBrhZKa1qEe5G2pbaklg5ya4nvc3HnPKvV2IuW+ybsY1J6Kb3LEzo09KSitrS7zh/Hv8Ar/cvY5vPcPhl4HX/AKdqfFHxOFKV234nCqyxk3vbZZKEMIxW5JdxjcwNiRiCSLkGSMbkE4FpySNqTfN+xYuT8fy298n9Cp8qZ41Ut0F4tlgwq1Z1DjbDoAgAAA1cXH5QSjj1obUJR5po1WmnpQlHfFo22SroThLdJPxKKU0+hGRKZGBKZJDRlcGJNyQTcEF2wj/Lh/5XoXCzexH9q8ihWv8AuT/c/M2Lmw0i4AuALgC4AuATcAXANTHP8qfczTbP7c/2vyPRYP7tP968yl3KiXrAi4JIuQTgRcE4GLZGJKRBBkXXLqezRiuy/nqWy66WjSgurHv1lFvqtpVqj3PDu1HYwa4nrPEzeBAAAB51Y3QBxdwDKZj6WxVkuG9dzKledHQqSWzHFcGXu5rR+JRg9qWD4rUah5T2kjEjAknEjAyuSRgTcEYG7DG10klJ2Wm5ex0YXpVSSWSXwnJqXNQbbeOLeL6e0y/z8R1n+lexlztW6vlMeY6G9/OP8+v1n+lew52rdXykcx0N7+Yf59frP9K9iedq3V8o5job38xPxCv1n+lew53q7l8o5iob38yHxGv1v2r2HO9XcvlI5hob38w+JV+t+1ew54q7l8pPMFHfL5h8Tr9b9q9hzxV3LuI5go75fMPidfrftQ55q7o9zJ/p+jvl8yMKmYVpJpy0enRRhVvapJNNLWsMmZ0bjpRkpJyxTxWtGlc5x1sCLglIi4JwIIxJIIJPShS25KPN2Nlmpacox3s02utoQlN+6m/Qvb0RcksNR8+bxeL2vE6uHjaJJDPcAAAAMA4uIhaQJK9nVC6U1w0fdw+vqcflDZ8UprZqfB5fzrO/yUteEpU372tcVn3ryK6V8tJIIBIJGJBNySMC6ZfX2qUX2W8tC3WCopU4P9K8Ch3nScatRfqb7HrRubTPQeUbTAG0wBtMAbTAxJ2mMBiRtEYE4i4wGk95zc1q7NJ9tl/fBHjvaSjSl16u86Fxwcq8Nb1PF9hUrlWLrgRcYk4EEEkAEEEncyTD3k5vhou9+y9Ts8n7PjJzezUuL/niV/lVa8IxprOWt8Fl3vyLNBXkkd8q6OzFaAgyAAAAABpYyndXAOROClFxe56GFWmpRcXk1gbKFVwkpRzTxRSq9Fwk4vgU+00HCTi9j/jL/Y7SqkIzWTXc9q7DyNRuwJAAIJJB08tx/wCE7S6L+j593PzOtctvUHoSyb1Pczhcorsc1+JBdJLWt69UWxO+qLCVQkAAAAAAAAESkkrvRLiQ2SljkVDMMb+LLTord29vt2Fbvi3fiPRj7MfF7y33BdrpR0pe1LwW40LnNOwQQCAACSYQcmkt70MqcHJpLN5GNWoopybwSWL4F3w1BU4KPL14lvsdnVOCitmfW9pQbwtTq1JTe16luWxHTwdPibzzHSAAAAAAAMZK4Bw69PZYBxs0wm3HaXSX1RzL5sOnHSiulHxX2OzydvL8OehJ9CT7pejyKwVouIAAIwJAABs4fGVKfQlZcnqvLh4WPbZbzqU9SeK3M5tuualV1tYS3x1d5vrPKvVh9T3K/wB/Au85z5LrZUfy/cn45U6sPqTz/wDo8SP6X/yf8/cfHKnVj5sc/wD6PEj+l/8AL/z9yfjlTqx82Of/APH4j+l/8n/P3Hxyp1Y+bHP/AOjxH9L/AOT/AJ+5DzypwjH6v2Dv/dDxJjyX31O6P3OdiMXUqdN3XLcvL3uc+13lUqam8FuR1LDdFOlrSxlvet/Y1zxnvwAJIAwAJwABYcnwdvzH4e/sd64rDh+ZJa/d9Sr8p7yxf4UXqXtvr2I78Y7Tsdorp2qcLIA9AAAAAAAAAauJo7SAONu0AK7meB2XtxWnFcu3uK/fN3YYzgtXvLd18C1cnr30kqU30l7Le1buJxjjlgAAAAAAwAIwJAAAAAAAIBOAAwAAAAB08uwP4jvLor69nudK6bv/ABHpSXQXi9xyL9vZUo6MX02vlW99e4tPYiypFNbOnhKFtWSQb4AAAAAAAAAAAOZi8NfVAHM7A0Eyv4/LXH5obuXL7FfvS6tHGcF0dq3cOotdyX4pYQqPCWyTylx6/M45xzvgAAAAAAAAAAAAAAAAAAA6WBy51NXpH17vc6V2XY6nSlqh4vh6nIvm+Y0k4x1z8I9b6+otCSirLRciyQgkkksEskU6pNybbbbettm9hcPfVmRidVIAkAAAAAAAAAAAENAHLxWF4oA5wBysXlilrHR8uD9jlXhdCljKGqW7Y/Q7l1X/AChhGpjKO/avVFfqU5RdpKzOBWoyi8JJplps9ojNaUZJrq/mowNZtAAAAAAAAAAAAABlGDbsldmUINvBLF7kY1aiim5NJLazvYPKba1P0+/sdy77mwwlUz+H19Cs3pyibxjR1LbPb2L6navY7KRXm8czcw2Gb1ZJB1oxsAZAAAAAAAAAAAAAAANAHPxGET3AHKnBx3gHjUpRmrSVzXXoRmsJJNG6zWmdN4wk0+rbxW049fKOMH4P3ONari2032P1LBYuU2yrH/aPp6HKq4ecOkmv7zOXXsk4e1Fry7zuWa3U6nsTT6sdfdmeJoPQAAAAAAAD0p0ZS6KbNtGzyn7MW+CNNotUIa5yUeL+h1aGTt6zduxav++Z07Lccnrm8FuWt/Y4tt5SxWqnFye96l3ZvwO1Rw8Ka+VW7ePmdmzWWFNYRWHXtfaV62W6pVeM5N7lsXYe0bvcbzzHSw+DtqwDpJWAJAAAAAAAAAAAAAAAAAAAPGpRTAOZVwNtwBoyi1vQBF0GEzXqYOnLfFenoeWrd9KWcF2avI9tC9a0MqkuD1+Zqyymm910eadyU3k5LtT80e2nylrLNQfY15M8Xk0es/I0u4Y7JvuRvjypltpx7JP0CyZdZ+QVwx+N9y9Q+VMv/JfM/Q9Y5RT4uT+hthcdNZuT7UvoaanKaq8owXY39Tap4ClHdFeOvqemldtKOUF26/M8da+K8s6jXDBeRtXSPUlhlqPDKTetvF9ZKu9yJINulgm94B06WHUQDYAAAAAAAAAAAAAAAAAAAAAAAAsAeU6KYBp1MCmAaksA1uAPF4WYBj+DMAfgz5AGSw02AescC3vANungEgDchQSAPawAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIsARsIAbCAJ2QCQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAf//Z",
+  }
+</script>
+<script src="https://widget.pandorabots.com/prod/pb-widget.js" type="text/javascript"></script>
+
 </html>
